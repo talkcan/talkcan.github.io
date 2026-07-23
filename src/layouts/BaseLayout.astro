@@ -1,5 +1,6 @@
 ---
 import { absoluteUrl, site } from "../config/site";
+import StructuredData from "../components/StructuredData.astro";
 import "../styles/fonts.css";
 import "../styles/tokens.css";
 import "../styles/global.css";
@@ -10,24 +11,43 @@ interface Props {
 }
 
 const {
-  title = `${site.name} — ${site.descriptor}`,
-  description = site.descriptor,
+  title = site.title,
+  description = site.description,
 } = Astro.props;
 const canonicalUrl = absoluteUrl(Astro.url.pathname);
+const previewImageUrl = absoluteUrl(site.previewImagePath);
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={site.language}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
+    <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#F7F3E8" />
     <link rel="canonical" href={canonicalUrl} />
+    <link rel="sitemap" href={absoluteUrl("/sitemap.xml")} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={site.name} />
+    <meta property="og:locale" content={site.locale} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={previewImageUrl} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Talkcan — A programmable walkie-talkie for your tools." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={previewImageUrl} />
+    <meta name="twitter:image:alt" content="Talkcan — A programmable walkie-talkie for your tools." />
     <link rel="icon" href="/brand/talkcan-symbol.svg" type="image/svg+xml" />
     <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png" />
     <link rel="icon" href="/favicon-16.png" sizes="16x16" type="image/png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
+    <StructuredData />
     <title>{title}</title>
   </head>
   <body>

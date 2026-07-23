@@ -1,0 +1,46 @@
+---
+import { absoluteUrl, site } from "../config/site";
+
+const canonicalOrigin = site.futureCanonicalOrigin ?? site.origin;
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": `${canonicalOrigin}/#website`,
+      url: canonicalOrigin,
+      name: site.name,
+      description: site.description,
+      inLanguage: site.language,
+      publisher: { "@id": `${canonicalOrigin}/#organization` },
+    },
+    {
+      "@type": "Organization",
+      "@id": `${canonicalOrigin}/#organization`,
+      name: site.name,
+      url: canonicalOrigin,
+      logo: absoluteUrl("/brand/talkcan-symbol.svg"),
+      sameAs: [site.organizationUrl],
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": `${canonicalOrigin}/#software`,
+      name: site.name,
+      description: site.descriptor,
+      url: canonicalOrigin,
+      applicationCategory: "UtilitiesApplication",
+      operatingSystem: "Android",
+      sameAs: [site.organizationUrl],
+      additionalProperty: [
+        {
+          "@type": "PropertyValue",
+          name: "Public maturity",
+          value: site.publicMaturity,
+        },
+      ],
+    },
+  ],
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
