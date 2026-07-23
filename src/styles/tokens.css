@@ -1,0 +1,43 @@
+:root {
+  /* Canonical brand palette. Do not duplicate with approximate values. */
+  --color-ink: #16181d;
+  --color-paper: #f7f3e8;
+  --color-can-red: #f25f5c;
+  --color-string-yellow: #f6c945;
+  --color-radio-blue: #2256a8;
+  --color-tin: #b9c0c8;
+  --color-white: #ffffff;
+  --color-signal-green: #2d7a55;
+
+  --color-page: var(--color-paper);
+  --color-surface: var(--color-white);
+  --color-text: var(--color-ink);
+  --color-action: var(--color-radio-blue);
+  --color-focus: var(--color-radio-blue);
+  --color-border: var(--color-tin);
+  --color-success: var(--color-signal-green);
+
+  --font-display: "Inter", system-ui, sans-serif;
+  --font-interface: "Inter", system-ui, sans-serif;
+  --font-code: "Liberation Mono", ui-monospace, monospace;
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-bold: 700;
+  --weight-display: 800;
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+
+  --radius-small: 0.375rem;
+  --radius-medium: 0.75rem;
+  --border-width: 2px;
+  --focus-width: 3px;
+  --content-width: 72rem;
+  --reading-width: 44rem;
+}
