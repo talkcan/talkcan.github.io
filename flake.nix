@@ -16,6 +16,7 @@
         default = pkgs.mkShellNoCC {
           packages = [
             pkgs.bun
+            pkgs.resvg
             (pkgs.python3.withPackages (python: [
               python.brotli
               python.fonttools
