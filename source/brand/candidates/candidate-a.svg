@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .ink { fill: var(--logo-ink, #16181d); }
+      .can { fill: var(--logo-can, #f25f5c); }
+      .tin { fill: var(--logo-tin, #b9c0c8); }
+      .line { fill: none; stroke: var(--logo-ink, #16181d); stroke-linecap: round; stroke-linejoin: round; stroke-width: 7; }
+      .wordmark { fill: var(--logo-ink, #16181d); font-family: Inter, Arial, sans-serif; font-size: 112px; font-weight: 800; letter-spacing: -5px; }
+    </style>
+    <symbol id="symbol" viewBox="0 0 160 160">
+      <path class="tin" d="M25 30c0-9 23-17 51-17s51 8 51 17v94c0 10-23 18-51 18s-51-8-51-18z"/>
+      <path class="can" d="M33 33c12 6 28 9 43 9s31-3 43-9v87c-11 7-27 10-43 10s-32-3-43-10z"/>
+      <ellipse class="ink" cx="76" cy="30" rx="43" ry="11"/>
+      <ellipse class="tin" cx="76" cy="30" rx="35" ry="6"/>
+      <path class="line" d="M53 67h45M53 84h45M53 101h45"/>
+      <path class="line" d="M119 109h16l13-16M135 109l13 16"/>
+      <circle cx="149" cy="92" r="7" fill="var(--logo-blue, #2256a8)"/>
+      <circle cx="149" cy="126" r="7" fill="var(--logo-red, #f25f5c)"/>
+      <circle cx="135" cy="109" r="7" fill="var(--logo-yellow, #f6c945)"/>
+    </symbol>
+    <symbol id="lockup" viewBox="0 0 640 180">
+      <use href="#symbol" width="160" height="160" y="10"/>
+      <text class="wordmark" x="170" y="123">talkcan</text>
+    </symbol>
+  </defs>
+</svg>

@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Talkcan identity candidates — maintainer review</title>
+    <style>
+      * { box-sizing: border-box; }
+      body { margin: 0; color: #16181d; background: #f7f3e8; font: 16px/1.5 Inter, Arial, sans-serif; }
+      main { width: min(1120px, calc(100% - 32px)); margin: 48px auto; }
+      h1, h2 { line-height: 1.1; }
+      .notice { max-width: 70ch; padding: 16px; border: 2px solid #2256a8; background: #fff; }
+      .candidate { margin: 40px 0; padding: 24px; border: 2px solid #b9c0c8; border-radius: 12px; background: #fff; }
+      .contexts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+      .context { min-height: 180px; padding: 20px; border: 1px solid #b9c0c8; display: grid; place-items: center; }
+      .reverse { --logo-ink: #fff; --logo-tin: #b9c0c8; background: #16181d; }
+      .mono-dark { --logo-can: #16181d; --logo-tin: #16181d; --logo-blue: #16181d; --logo-red: #16181d; --logo-yellow: #16181d; }
+      .mono-light { --logo-ink: #fff; --logo-can: #fff; --logo-tin: #fff; --logo-blue: #fff; --logo-red: #fff; --logo-yellow: #fff; background: #16181d; }
+      .lockup { width: min(100%, 480px); aspect-ratio: 640 / 180; }
+      .sizes { display: flex; align-items: center; gap: 24px; }
+      .symbol-32 { width: 32px; height: 32px; }
+      .symbol-16 { width: 16px; height: 16px; }
+      .social { min-height: 315px; background: #f7f3e8; }
+      .social-inner { width: min(100%, 560px); padding: 32px; border-left: 8px solid #f6c945; background: #fff; }
+      .social .lockup { width: min(100%, 400px); }
+      .label { display: block; margin-bottom: 8px; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+      @media (max-width: 700px) { .contexts { grid-template-columns: 1fr; } }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Talkcan identity candidates</h1>
+      <p class="notice"><strong>Review material only.</strong> None of these candidates is canonical or approved for production. Select one direction explicitly before masters or distribution assets are produced.</p>
+
+      <section class="candidate" id="candidate-a">
+        <h2>A — Reference curve</h2>
+        <p>Closest to the supplied reference: rounded tin, calm silhouette, compact branch.</p>
+        <div class="contexts">
+          <div class="context"><svg class="lockup"><use href="candidate-a.svg#lockup" /></svg></div>
+          <div class="context reverse"><svg class="lockup"><use href="candidate-a.svg#lockup" /></svg></div>
+          <div class="context mono-dark"><svg class="lockup"><use href="candidate-a.svg#lockup" /></svg></div>
+          <div class="context mono-light"><svg class="lockup"><use href="candidate-a.svg#lockup" /></svg></div>
+          <div class="context"><div><span class="label">Favicon sizes</span><div class="sizes"><svg class="symbol-32" viewBox="0 0 160 160"><use href="candidate-a.svg#symbol" /></svg><svg class="symbol-16" viewBox="0 0 160 160"><use href="candidate-a.svg#symbol" /></svg></div></div></div>
+          <div class="context social"><div class="social-inner"><svg class="lockup"><use href="candidate-a.svg#lockup" /></svg><p>A programmable walkie-talkie for your tools.</p></div></div>
+        </div>
+      </section>
+
+      <section class="candidate" id="candidate-b">
+        <h2>B — Signal rib</h2>
+        <p>More graphic and equipment-like: straight body, yellow construction ribs, stronger small silhouette.</p>
+        <div class="contexts">
+          <div class="context"><svg class="lockup"><use href="candidate-b.svg#lockup" /></svg></div>
+          <div class="context reverse"><svg class="lockup"><use href="candidate-b.svg#lockup" /></svg></div>
+          <div class="context mono-dark"><svg class="lockup"><use href="candidate-b.svg#lockup" /></svg></div>
+          <div class="context mono-light"><svg class="lockup"><use href="candidate-b.svg#lockup" /></svg></div>
+          <div class="context"><div><span class="label">Favicon sizes</span><div class="sizes"><svg class="symbol-32" viewBox="0 0 160 160"><use href="candidate-b.svg#symbol" /></svg><svg class="symbol-16" viewBox="0 0 160 160"><use href="candidate-b.svg#symbol" /></svg></div></div></div>
+          <div class="context social"><div class="social-inner"><svg class="lockup"><use href="candidate-b.svg#lockup" /></svg><p>A programmable walkie-talkie for your tools.</p></div></div>
+        </div>
+      </section>
+
+      <section class="candidate" id="candidate-c">
+        <h2>C — Utility can</h2>
+        <p>Roundest and friendliest direction: broad top rim, soft body, practical label lines.</p>
+        <div class="contexts">
+          <div class="context"><svg class="lockup"><use href="candidate-c.svg#lockup" /></svg></div>
+          <div class="context reverse"><svg class="lockup"><use href="candidate-c.svg#lockup" /></svg></div>
+          <div class="context mono-dark"><svg class="lockup"><use href="candidate-c.svg#lockup" /></svg></div>
+          <div class="context mono-light"><svg class="lockup"><use href="candidate-c.svg#lockup" /></svg></div>
+          <div class="context"><div><span class="label">Favicon sizes</span><div class="sizes"><svg class="symbol-32" viewBox="0 0 160 160"><use href="candidate-c.svg#symbol" /></svg><svg class="symbol-16" viewBox="0 0 160 160"><use href="candidate-c.svg#symbol" /></svg></div></div></div>
+          <div class="context social"><div class="social-inner"><svg class="lockup"><use href="candidate-c.svg#lockup" /></svg><p>A programmable walkie-talkie for your tools.</p></div></div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
