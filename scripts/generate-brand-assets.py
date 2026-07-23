@@ -175,7 +175,7 @@ def rasterize_assets() -> dict[Path, tuple[int, int]]:
         PUBLIC_DIR / "favicon-16.png": (16, 16, OUTPUT_DIR / "talkcan-symbol.svg"),
         PUBLIC_DIR / "favicon-32.png": (32, 32, OUTPUT_DIR / "talkcan-symbol.svg"),
         PUBLIC_DIR / "apple-touch-icon.png": (180, 180, OUTPUT_DIR / "talkcan-symbol.svg"),
-        PUBLIC_DIR / "social-preview.png": (
+        PUBLIC_DIR / "talkcan-social-preview.png": (
             1200,
             630,
             SOURCE_OUTPUT_DIR / "social-preview-source.svg",

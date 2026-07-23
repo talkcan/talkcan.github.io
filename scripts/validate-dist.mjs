@@ -62,9 +62,9 @@ const requiredMetadata = [
   /<meta property="og:title" content="[^"]+">/,
   /<meta property="og:description" content="[^"]+">/,
   /<meta property="og:url" content="https:\/\/talkcan\.io\/">/,
-  /<meta property="og:image" content="https:\/\/talkcan\.io\/social-preview\.png">/,
+  /<meta property="og:image" content="https:\/\/talkcan\.io\/talkcan-social-preview\.png">/,
   /<meta name="twitter:card" content="summary_large_image">/,
-  /<meta name="twitter:image" content="https:\/\/talkcan\.io\/social-preview\.png">/,
+  /<meta name="twitter:image" content="https:\/\/talkcan\.io\/talkcan-social-preview\.png">/,
 ];
 
 for (const pattern of requiredMetadata) {
@@ -153,7 +153,7 @@ const requiredAssets = [
   "favicon-16.png",
   "favicon-32.png",
   "apple-touch-icon.png",
-  "social-preview.png",
+  "talkcan-social-preview.png",
   "fonts/inter-latin.woff2",
   "robots.txt",
   "sitemap.xml",

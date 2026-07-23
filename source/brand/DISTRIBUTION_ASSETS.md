@@ -11,7 +11,7 @@ native size before success.
 | `public/favicon-16.png` | 16 × 16 px | `public/brand/talkcan-symbol.svg` |
 | `public/favicon-32.png` | 32 × 32 px | `public/brand/talkcan-symbol.svg` |
 | `public/apple-touch-icon.png` | 180 × 180 px | `public/brand/talkcan-symbol.svg` |
-| `public/social-preview.png` | 1200 × 630 px | `source/brand/masters/social-preview-source.svg` |
+| `public/talkcan-social-preview.png` | 1200 × 630 px | `source/brand/masters/social-preview-source.svg` |
 
 The editable SVG and generator are the sources of truth. Do not edit generated
 PNG files directly.

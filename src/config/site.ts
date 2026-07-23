@@ -11,7 +11,7 @@ export const site = Object.freeze({
   publicMaturity: "Pre-launch",
   language: "en",
   locale: "en_US",
-  previewImagePath: "/social-preview.png",
+  previewImagePath: "/talkcan-social-preview.png",
   futureCanonicalOrigin: "https://talkcan.io",
 });
 
