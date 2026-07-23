@@ -1,0 +1,22 @@
+# Dependency and package-manager state
+node_modules/
+
+# Astro and generated publication output
+.astro/
+dist/
+
+# Nix and direnv state
+.direnv/
+result
+result-*
+
+# Local editor, OS, and log state
+.DS_Store
+*.log
+*.swp
+*.swo
+
+# Local environment files; committed examples remain allowed
+.env
+.env.*
+!.env.example
