@@ -230,38 +230,13 @@ h3 {
   font-weight: var(--weight-bold);
 }
 
-.hero__mark {
-  position: relative;
-  isolation: isolate;
-}
-
-.hero__mark::before {
-  position: absolute;
-  z-index: -1;
-  inset: 8% 10% 5%;
-  border-radius: 50%;
-  background: var(--color-white);
-  content: "";
-}
 
 .hero__mark img {
   width: min(100%, 33rem);
+  height: auto;
   margin-inline: auto;
-  filter: drop-shadow(0 1.25rem 0 color-mix(in srgb, var(--color-tin) 35%, transparent));
 }
 
-.hero__string {
-  position: absolute;
-  z-index: -2;
-  right: 0;
-  bottom: 15%;
-  width: 58%;
-  height: 5px;
-  border-radius: 1rem;
-  background: var(--color-string-yellow);
-  transform: rotate(-12deg);
-  transform-origin: left center;
-}
 
 .section {
   padding-block: clamp(5rem, 10vw, 9rem);

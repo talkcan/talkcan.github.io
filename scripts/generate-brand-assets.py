@@ -97,10 +97,19 @@ def write_assets() -> None:
     SOURCE_OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     wordmark = text_path("talkcan", 800, 112, 170, 130, -3)
     variants = {
-        "talkcan-logo.svg": (INK, PAPER, CAN_RED, TIN, RADIO_BLUE, CAN_RED, STRING_YELLOW),
-        "talkcan-logo-reverse.svg": (WHITE, WHITE, CAN_RED, TIN, RADIO_BLUE, CAN_RED, STRING_YELLOW),
-        "talkcan-mark-dark.svg": (INK, INK, INK, INK, INK, INK, INK),
-        "talkcan-mark-light.svg": (WHITE, WHITE, WHITE, WHITE, WHITE, WHITE, WHITE),
+        "talkcan-logo.svg": (
+            INK,
+            (INK, PAPER, CAN_RED, TIN, RADIO_BLUE, CAN_RED, STRING_YELLOW),
+        ),
+        "talkcan-logo-reverse.svg": (
+            WHITE,
+            (INK, PAPER, CAN_RED, TIN, RADIO_BLUE, CAN_RED, STRING_YELLOW),
+        ),
+        "talkcan-mark-dark.svg": (INK, (INK, INK, INK, INK, INK, INK, INK)),
+        "talkcan-mark-light.svg": (
+            WHITE,
+            (WHITE, WHITE, WHITE, WHITE, WHITE, WHITE, WHITE),
+        ),
     }
 
     symbol = symbol_geometry(INK, PAPER, CAN_RED, TIN, RADIO_BLUE, CAN_RED, STRING_YELLOW)
@@ -109,12 +118,12 @@ def write_assets() -> None:
         encoding="utf-8",
     )
 
-    for filename, colors in variants.items():
+    for filename, (wordmark_color, colors) in variants.items():
         ink, paper, can, tin, blue, red, yellow = colors
         geometry = symbol_geometry(ink, paper, can, tin, blue, red, yellow)
         body = (
             f'<g transform="translate(0 10)">{geometry}</g>\n'
-            f'  <path fill="{ink}" d="{wordmark}"/>'
+            f'  <path fill="{wordmark_color}" d="{wordmark}"/>'
         )
         (OUTPUT_DIR / filename).write_text(
             svg_document("0 0 640 180", "Talkcan", body),
