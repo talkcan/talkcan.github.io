@@ -1,0 +1,25 @@
+---
+import { site } from "../config/site";
+---
+
+<header class="site-header">
+  <div class="shell site-header__inner">
+    <a class="brand-link" href="/" aria-label="Talkcan homepage">
+      <img src="/brand/talkcan-symbol.svg" alt="" width="40" height="40" />
+      <span>Talkcan</span>
+    </a>
+    <nav aria-label="Primary navigation">
+      <ul class="nav-list">
+        <li><a href="#how-it-works">How it works</a></li>
+        <li><a href="#channels">Channels</a></li>
+        <li><a href="#principles">Principles</a></li>
+        <li><a href="#status">Status</a></li>
+        <li>
+          <a href={site.organizationUrl}>
+            GitHub <span class="sr-only">(leaves this website)</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>

@@ -1,0 +1,38 @@
+---
+import { site } from "../config/site";
+---
+
+<section id="status" class="section section--white" aria-labelledby="status-title">
+  <div class="shell status-layout">
+    <div class="section-heading">
+      <p class="eyebrow">Pre-launch</p>
+      <h2 id="status-title">Built in public. Not released yet.</h2>
+      <p>
+        No Talkcan-branded public release exists yet. This site therefore offers
+        no download or installation instructions and makes no final plugin-format promise.
+      </p>
+    </div>
+    <div class="status-cards">
+      <article>
+        <span class="status-label">In progress</span>
+        <h3>Product work</h3>
+        <p>The Android application is completing its current development leg separately.</p>
+      </article>
+      <article>
+        <span class="status-label">Concept</span>
+        <h3>Open extension direction</h3>
+        <p>Channels and integrations describe intended outcomes, not a frozen author API or package format.</p>
+      </article>
+    </div>
+    <aside class="open-source-callout" aria-labelledby="open-source-title">
+      <div>
+        <p class="eyebrow">Open source</p>
+        <h3 id="open-source-title">Follow the work at its source.</h3>
+      </div>
+      <a class="button" href={site.organizationUrl}>
+        Visit Talkcan on GitHub
+        <span class="sr-only">(leaves this website)</span>
+      </a>
+    </aside>
+  </div>
+</section>

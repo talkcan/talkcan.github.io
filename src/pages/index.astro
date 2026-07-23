@@ -1,17 +1,22 @@
 ---
-const title = "Talkcan";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ChannelMap from "../components/ChannelMap.astro";
+import Hero from "../components/Hero.astro";
+import InteractionLoop from "../components/InteractionLoop.astro";
+import Principles from "../components/Principles.astro";
+import ProjectStatus from "../components/ProjectStatus.astro";
+import SiteFooter from "../components/SiteFooter.astro";
+import SiteHeader from "../components/SiteHeader.astro";
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>{title}</title>
-  </head>
-  <body>
-    <main>
-      <h1>{title}</h1>
-    </main>
-  </body>
-</html>
+<BaseLayout>
+  <SiteHeader />
+  <main id="main-content">
+    <Hero />
+    <InteractionLoop />
+    <ChannelMap />
+    <Principles />
+    <ProjectStatus />
+  </main>
+  <SiteFooter />
+</BaseLayout>

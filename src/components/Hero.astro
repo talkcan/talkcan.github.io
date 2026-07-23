@@ -1,0 +1,26 @@
+---
+import { site } from "../config/site";
+---
+
+<section class="hero shell" aria-labelledby="hero-title">
+  <div class="hero__copy">
+    <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span>{site.publicMaturity}</p>
+    <h1 id="hero-title">Talkcan</h1>
+    <p class="hero__descriptor">{site.descriptor}</p>
+    <p class="hero__summary">
+      <strong>Concept:</strong> one familiar talk button, configurable channels,
+      and useful destinations on the other end.
+    </p>
+    <div class="hero__actions">
+      <a class="button" href={site.organizationUrl}>
+        Explore Talkcan on GitHub
+        <span class="sr-only">(leaves this website)</span>
+      </a>
+      <a class="text-link" href="#how-it-works">See the interaction</a>
+    </div>
+  </div>
+  <div class="hero__mark" aria-hidden="true">
+    <img src="/brand/talkcan-symbol.svg" alt="" width="480" height="480" />
+    <span class="hero__string"></span>
+  </div>
+</section>

@@ -1,0 +1,18 @@
+---
+import { site } from "../config/site";
+---
+
+<footer class="site-footer">
+  <div class="shell site-footer__inner">
+    <div>
+      <img src="/brand/talkcan-logo-reverse.svg" alt="Talkcan" width="256" height="72" />
+      <p>{site.brandLine}</p>
+    </div>
+    <nav aria-label="Footer navigation">
+      <a href="/">Home</a>
+      <a href={site.organizationUrl}>
+        GitHub <span class="sr-only">(leaves this website)</span>
+      </a>
+    </nav>
+  </div>
+</footer>
