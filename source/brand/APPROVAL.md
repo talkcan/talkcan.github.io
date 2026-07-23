@@ -1,15 +1,13 @@
-# Canonical identity approval
+# Brand review status
 
-- Approved direction: **A — Reference curve**
-- Approval date: 2026-07-23
-- Approver: Talkcan maintainer, recorded through the OpenSpec implementation workflow
-- Reviewed contexts: light, reverse, dark monochrome, light monochrome,
-  16-pixel symbol, 32-pixel symbol, and social-card composition
-- Review source: `candidates/review.html`
-- Candidate source: `candidates/candidate-a.svg`
+- Selected direction: **A — Reference curve**
+- Accepted raster source: `model-output/talkcan-candidate-a-nanobanana-raw.png`
+- Vector candidate: `vectorization/talkcan-symbol-vector-draft.svg`
+- Live contextual review requested: 2026-07-23
+- Canonical approval: **pending maintainer feedback**
 
-This approval authorizes candidate A as the geometric direction for sanitized
-production masters. Candidate files remain review provenance and are not
-production assets. Production masters must remove external font dependence,
-executable content, remote references, animation, raster embedding, and
-editor-private payloads before publication.
+The maintainer viewed and accepted the Nanobanana raster as the vectorization
+source, then explicitly directed publication of the reconstructed vector family
+to review it in the normal website context. This live candidate deployment is
+not canonical approval. Final approval or requested corrections must be
+recorded after contextual review.

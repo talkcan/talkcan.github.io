@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Talkcan vector candidate approval</title>
+  <style>
+    @font-face {
+      font-family: Inter;
+      src: url("../../fonts/InterVariable.ttf") format("truetype");
+      font-weight: 100 900;
+    }
+    :root {
+      color: #16181d;
+      background: #f7f3e8;
+      font-family: Inter, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; padding: 48px; }
+    h1 { margin: 0 0 8px; font-size: 32px; }
+    .note { margin: 0 0 32px; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+      max-width: 1200px;
+    }
+    .card {
+      min-height: 360px;
+      padding: 28px;
+      border: 2px solid #16181d;
+      border-radius: 24px;
+      background: #fff;
+    }
+    .card h2 { margin: 0 0 24px; font-size: 20px; }
+    .stage {
+      display: flex;
+      min-height: 260px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 16px;
+      background: #f7f3e8;
+    }
+    .stage.ink { background: #16181d; }
+    .symbol { display: block; width: 280px; height: 280px; }
+    .mono {
+      width: 280px;
+      height: 280px;
+      background: #16181d;
+      mask: url("talkcan-symbol-vector-draft.svg") center / contain no-repeat;
+    }
+    .mono.light { background: #fff; }
+    .small-sizes { gap: 32px; }
+    .small-sizes figure { margin: 0; text-align: center; }
+    .small-sizes img { display: block; margin: 0 auto 8px; }
+    .lockup { gap: 18px; padding-inline: 32px; }
+    .lockup img { width: 150px; height: 150px; }
+    .wordmark { font-size: 88px; font-weight: 800; letter-spacing: -5px; }
+    .social { display: block; min-height: 0; padding: 32px; background: #f7f3e8; }
+    .social-inner {
+      display: grid;
+      grid-template-columns: 170px 1fr;
+      align-items: center;
+      min-height: 240px;
+      padding: 24px;
+      border-radius: 16px;
+      border-left: 8px solid #f6c945;
+      background: #fff;
+    }
+    .social img { width: 160px; height: 160px; }
+    .social strong { display: block; font-size: 56px; letter-spacing: -3px; }
+    .social span { display: block; margin-top: 8px; font-size: 20px; }
+  </style>
+</head>
+<body>
+  <h1>Talkcan vector candidate</h1>
+  <p class="note">Controlled reconstruction of the accepted Nanobanana raster. The wordmark remains deterministic Inter 800.</p>
+  <main class="grid">
+    <section class="card">
+      <h2>Full color on Paper</h2>
+      <div class="stage"><img class="symbol" src="talkcan-symbol-vector-draft.svg" alt="Talkcan vector candidate" /></div>
+    </section>
+    <section class="card">
+      <h2>Full color on Ink</h2>
+      <div class="stage ink"><img class="symbol" src="talkcan-symbol-vector-draft.svg" alt="Talkcan vector candidate" /></div>
+    </section>
+    <section class="card">
+      <h2>Dark monochrome</h2>
+      <div class="stage"><div class="mono" role="img" aria-label="Talkcan dark monochrome candidate"></div></div>
+    </section>
+    <section class="card">
+      <h2>Light monochrome</h2>
+      <div class="stage ink"><div class="mono light" role="img" aria-label="Talkcan light monochrome candidate"></div></div>
+    </section>
+    <section class="card">
+      <h2>Minimum sizes</h2>
+      <div class="stage small-sizes">
+        <figure><img src="talkcan-symbol-vector-draft.svg" alt="" width="16" height="16" /><figcaption>16 px</figcaption></figure>
+        <figure><img src="talkcan-symbol-vector-draft.svg" alt="" width="32" height="32" /><figcaption>32 px</figcaption></figure>
+        <figure><img src="talkcan-symbol-vector-draft.svg" alt="" width="64" height="64" /><figcaption>64 px</figcaption></figure>
+      </div>
+    </section>
+    <section class="card">
+      <h2>Horizontal lockup</h2>
+      <div class="stage lockup"><img src="talkcan-symbol-vector-draft.svg" alt="" /><span class="wordmark">talkcan</span></div>
+    </section>
+    <section class="card" style="grid-column: 1 / -1">
+      <h2>Social-card context</h2>
+      <div class="stage social">
+        <div class="social-inner">
+          <img src="talkcan-symbol-vector-draft.svg" alt="" />
+          <div><strong>talkcan</strong><span>A programmable walkie-talkie for your tools.</span></div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

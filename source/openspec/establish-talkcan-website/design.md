@@ -65,11 +65,11 @@ Use `prefers-reduced-motion` to remove nonessential transitions. Route and strin
 
 Primary navigation, content, metadata, and brand storytelling must work without JavaScript. Add browser code only for a concrete enhancement that cannot be expressed with HTML and CSS, such as copying future installation text. The pre-launch site currently needs none. No React, Vue, Svelte, client router, analytics loader, or general animation dependency will be added.
 
-### D6: Treat asset creation as a reviewed design input, not a build-time generator
+### D6: Treat model artwork and vectorization as two separately reviewed design inputs
 
-Use the PDF artwork and playbook as references to create a small set of candidates. Image-generation tools such as Nanobanana 2 may explore composition or refine illustrative direction. Vector tracing or controlled reconstruction may establish clean geometry. The wordmark must be typeset deterministically rather than accepted from an image model.
+Use the PDF artwork and playbook as references to generate one raster candidate at a time with an image model such as the Nano Banana web interface. Preserve the accepted model output unchanged with its prompt, interface/model information when exposed, dimensions, and checksum. The maintainer must see the actual raster and explicitly accept it as the vectorization source; a candidate name, textual description, recommendation, or agent-only rendering is not approval.
 
-Present candidate symbol, horizontal lockup, reverse lockup, monochrome treatment, favicon-size rendering, and social-card context to the maintainer. Record approval before the website adopts the master. Store sanitized SVG masters and deterministic exports in the repository. CI never invokes an image model and never regenerates the canonical mark from a prompt.
+Trace or controllably reconstruct the accepted raster into clean editable geometry, enforce the canonical flat palette, and remove model artifacts without silently redesigning the selected composition. Typeset and outline the wordmark deterministically rather than accepting model-generated text. Present the resulting symbol, horizontal lockup, reverse lockup, monochrome treatments, favicon-size renderings, and social-card context to the maintainer. Record a second explicit approval of those actual renderings before the family becomes canonical. The maintainer may explicitly direct a temporary live candidate deployment for contextual review without granting canonical approval. CI never invokes an image model and never regenerates the canonical mark from a prompt.
 
 ### D7: Make brand tokens the only styling authority
 
@@ -112,7 +112,7 @@ Before acceptance, serve `dist/` locally and drive the real output in Chromium a
 ## Risks / Trade-offs
 
 - [The target repository does not exist] → Create it under the Talkcan organization first, transfer these planning artifacts and canonical brand sources, and make the first implementation commit there rather than adding website code to Subspace.
-- [Generated artwork is inconsistent or contains artifacts] → Treat model output only as candidate material, reconstruct deterministic vectors, inspect small and monochrome forms, and require explicit approval.
+- [Generated artwork is inconsistent or contains artifacts] → Preserve the accepted raw model raster as provenance, reconstruct deterministic vectors from it, inspect the actual rendered family at small and monochrome sizes, and require separate maintainer approval before publication.
 - [Brand approval delays the full visual site] → Complete content structure and token work independently, but do not publish an unapproved approximation as the canonical mark.
 - [Public claims drift away from product reality] → Classify every behavior claim and review site claims against public releases on each change; do not copy the stale Subspace README as current truth.
 - [GitHub Pages cannot set arbitrary response headers] → Keep the site static, avoid sensitive flows and third-party scripts, use safe markup and local assets, and do not pretend a meta policy replaces unavailable response headers.
@@ -125,7 +125,7 @@ Before acceptance, serve `dist/` locally and drive the real output in Chromium a
 1. Create the public `talkcan/talkcan.github.io` repository with protected default-branch and Pages environment settings.
 2. Transfer this completed OpenSpec change, the operational playbook, the visual guideline reference, and recorded brand decisions into the target repository.
 3. Bootstrap the locked Astro/Bun site and publication validation without configuring a custom domain.
-4. Produce and review brand candidates; commit only the explicitly approved vector masters and deterministic distribution outputs.
+4. Generate and retain an image-model raster candidate, obtain maintainer acceptance of the viewed raster as the vectorization source, reconstruct the vector family, and publish it only after the maintainer separately approves the rendered production contexts.
 5. Build and browser-verify the complete pre-launch site locally.
 6. Merge through the default branch and verify deployment at the organization’s GitHub Pages URL.
 7. The maintainer manually verifies the domain, configures DNS and the Pages custom domain, and confirms HTTPS.

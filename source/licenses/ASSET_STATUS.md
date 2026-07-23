@@ -1,9 +1,9 @@
 # Talkcan asset status
 
-The canonical website artwork derives from the supplied Talkcan visual
-guideline reference and candidate A approved on 2026-07-23. The deterministic
-source is `scripts/generate-brand-assets.py`; generated editable SVG masters
-are under `public/brand/`.
+The current website artwork is a maintainer-directed live review candidate
+derived from the accepted Nanobanana raster. The controlled reconstruction is
+implemented by `scripts/generate-brand-assets.py`; generated editable SVG
+masters are under `public/brand/`. Canonical approval remains pending.
 
 No separate public asset or trademark license has been approved. Do not infer
 one from the website repository's code license or publish broader reuse terms

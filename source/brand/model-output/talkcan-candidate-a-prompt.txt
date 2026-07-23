@@ -1,0 +1,55 @@
+Redraw the attached Talkcan symbol as one refined, professional logo icon. Treat the attached image as a strict structural reference—not general inspiration. Preserve its recognizable composition and topology while improving balance, consistency, and small-size legibility.
+
+CAN CONSTRUCTION
+- Place one open tin can on the left side of a square canvas.
+- The can occupies approximately 55% of the total symbol width and 70% of its height.
+- Use a simple, slightly tapered cylindrical body: narrower at the top and subtly wider at the bottom.
+- Show the open top as a wide horizontal oval.
+- Give the top rim a thick Tin-gray outer band, a thin Ink edge, and a dark Ink interior.
+- Fill the main body with Can Red.
+- Add one broad vertical Paper-colored stripe running from beneath the top rim to the lower edge, slightly left of center.
+- Add exactly three short, parallel, horizontal Ink slots on the upper-middle body. Use equal lengths, equal spacing, rounded ends, and a heavy consistent stroke.
+- Finish the bottom with a simple curved Ink rim and a restrained Tin-gray underside.
+- Keep the can mildly imperfect and tactile, but geometrically controlled—not sketchy or distressed.
+
+STRING AND ENDPOINT CONSTRUCTION
+- A single thick Ink string exits from the middle-right edge of the can.
+- The string travels diagonally down-right for a short distance into one solid circular Ink junction.
+- From that junction, create exactly three branches:
+  1. Radio Blue branch travelling diagonally up-right to one Radio Blue circular endpoint.
+  2. String Yellow branch travelling horizontally right to one String Yellow circular endpoint.
+  3. Can Red branch travelling diagonally down-right to one Can Red circular endpoint.
+- Every branch uses the same stroke width.
+- Every endpoint uses the same circle diameter.
+- Branches must connect cleanly at the central Ink junction.
+- Do not add more branches, nodes, strings, controls, radio waves, or decorations.
+
+COMPOSITION
+- Use a square 2048×2048 canvas.
+- Center the complete can-and-endpoints symbol with generous, even margins.
+- The endpoint structure must remain clearly separated from the can.
+- Balance the combined silhouette so it does not feel heavier on either side.
+- Ensure the symbol remains readable when reduced to 32×32 pixels.
+- Show one symbol only, straight-on and isolated.
+- Use a solid Paper background.
+
+STYLE
+- Flat, bold, friendly, practical, tactile, and hardware-first.
+- Crisp closed shapes with restrained rounded corners.
+- Consistent heavy line weights.
+- No text and no wordmark.
+- No gradients, shadows, highlights, reflections, textures, noise, depth effects, perspective scene, photorealism, mockup, border, or surrounding interface.
+- Do not turn the can into a face, mascot, microphone, radio, speaker, robot, or beverage container.
+- Do not use generic technology, network, circuit, AI, or communications imagery.
+- Do not redesign the central metaphor: it must remain one open can connected to one junction and exactly three colored endpoints.
+
+Use only these flat colors:
+- Ink: #16181D
+- Paper: #F7F3E8
+- Can Red: #F25F5C
+- String Yellow: #F6C945
+- Radio Blue: #2256A8
+- Tin: #B9C0C8
+- White: #FFFFFF
+
+Return only the finished isolated logo artwork, with no labels, explanation, alternate versions, or presentation mockup.

@@ -1,12 +1,20 @@
 ## ADDED Requirements
 
-### Requirement: Canonical artwork requires explicit maintainer approval
-Production artwork SHALL be derived from the supplied Talkcan brand sources and SHALL become canonical only after the maintainer reviews candidate presentations and explicitly approves one identity. Image-generation output, automatic tracing output, extracted PDF raster artwork, and unreviewed redraws SHALL NOT become canonical or ship on the production website merely because they were generated successfully.
+### Requirement: Image-model raster candidates retain provenance
+At least one logo or symbol candidate SHALL be generated with an image model using the supplied Talkcan brand sources as reference. The accepted raw raster SHALL be retained unchanged outside the public build together with the exact prompt, exposed model or interface information, native dimensions, checksum, and approval boundary. Model output SHALL remain non-production source material and SHALL NOT be embedded in canonical SVG masters.
 
-#### Scenario: Candidate artwork is generated
-- **WHEN** an image model, tracing tool, or vector editor produces a logo or symbol candidate
-- **THEN** the candidate SHALL remain non-production review material
-- **AND** the website SHALL NOT adopt it until explicit maintainer approval is recorded
+#### Scenario: Maintainer accepts a raster for vectorization
+- **WHEN** the maintainer is shown the actual generated raster and explicitly accepts it
+- **THEN** the repository SHALL preserve that exact raster and its provenance as the vectorization source
+- **AND** a candidate name, textual description, recommendation, or agent-only inspection SHALL NOT substitute for viewing the image
+
+### Requirement: Canonical artwork requires separate vector approval
+Production artwork SHALL be traced or controllably reconstructed from the accepted raster and SHALL become canonical only after the maintainer reviews actual renderings of the resulting vector family and explicitly approves them. At the maintainer’s explicit direction, the vector family MAY be deployed temporarily for contextual review without becoming canonical. Image-generation output, automatic tracing output, extracted PDF raster artwork, and unreviewed redraws SHALL NOT become canonical merely because they were generated or deployed successfully.
+
+#### Scenario: Vector candidate is prepared
+- **WHEN** the accepted raster has been converted into a symbol, horizontal lockup, reverse lockup, monochrome treatments, favicon-size renderings, and social-card context
+- **THEN** those actual renderings SHALL be presented to the maintainer
+- **AND** production assets SHALL remain unchanged until explicit approval of the rendered vector family is recorded
 
 ### Requirement: Approved masters are true editable vectors
 The canonical logo, symbol, reverse lockup, and monochrome variants SHALL be stored as editable SVG masters using paths, shapes, and deterministic typography treatment. Canonical SVG files SHALL NOT embed raster images, remote resources, scripts, event handlers, animation, editor-private binary payloads, or fonts fetched at render time. Their visible geometry SHALL remain legible at the documented minimum sizes.

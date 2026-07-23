@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 2048" role="img" aria-labelledby="title description">
+  <title id="title">Talkcan vector candidate</title>
+  <desc id="description">A red open can connected to blue, yellow, and red endpoints.</desc>
+  <metadata>Controlled reconstruction of SHA-256 dde5fb14fc377e8bf82163e42083f0d3302b1f20d394743620483eaa45ba287b</metadata>
+  <defs>
+    <clipPath id="can-body">
+      <path d="M280 480H1200L1170 1470C1166 1542 984 1595 760 1595S350 1542 340 1470Z"/>
+    </clipPath>
+  </defs>
+  <ellipse cx="760" cy="1560" rx="470" ry="132" fill="#B9C0C8"/>
+  <path fill="#F25F5C" d="M280 480H1200L1170 1470C1166 1542 984 1595 760 1595S350 1542 340 1470Z"/>
+  <path fill="#F7F3E8" clip-path="url(#can-body)" d="M420 450L585 460L665 1620H488Z"/>
+  <path fill="none" stroke="#16181D" stroke-linecap="round" stroke-width="54" d="M530 830H958M530 960H958M530 1090H958"/>
+  <path fill="none" stroke="#16181D" stroke-linecap="round" stroke-width="58" d="M365 1460C435 1540 610 1570 760 1570S1085 1540 1155 1460"/>
+  <path fill="none" stroke="#16181D" stroke-linecap="round" stroke-width="56" d="M1160 1215L1470 1400"/>
+  <path fill="none" stroke="#2256A8" stroke-linecap="round" stroke-width="56" d="M1470 1400L1710 1090"/>
+  <path fill="none" stroke="#F6C945" stroke-linecap="round" stroke-width="56" d="M1470 1400H1820"/>
+  <path fill="none" stroke="#F25F5C" stroke-linecap="round" stroke-width="56" d="M1470 1400L1710 1740"/>
+  <circle cx="1470" cy="1400" r="66" fill="#16181D"/>
+  <circle cx="1710" cy="1090" r="60" fill="#2256A8"/>
+  <circle cx="1820" cy="1400" r="60" fill="#F6C945"/>
+  <circle cx="1710" cy="1740" r="60" fill="#F25F5C"/>
+  <ellipse cx="740" cy="480" rx="470" ry="158" fill="#B9C0C8"/>
+  <ellipse cx="740" cy="480" rx="420" ry="122" fill="#16181D"/>
+</svg>

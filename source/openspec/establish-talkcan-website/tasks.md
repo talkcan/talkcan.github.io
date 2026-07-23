@@ -16,11 +16,11 @@
 ## 3. Canonical Brand Asset Approval
 
 - [x] 3.1 Extract the approved palette, typography roles, logo constraints, minimum-size behavior, and prohibited transformations into reusable website brand tokens and asset guidance
-- [x] 3.2 Produce a small candidate set for the can/string/endpoint symbol and horizontal lockup using the supplied artwork as reference, permitted image-generation tools for exploration, deterministic wordmark typography, and controlled vector reconstruction
-- [x] 3.3 Present each candidate in light, reverse, monochrome, favicon-size, and social-card contexts and obtain explicit maintainer approval for one canonical identity
-- [x] 3.4 Sanitize the approved logo, reverse logo, standalone symbol, and monochrome variants into editable SVG masters with no raster embedding, remote dependency, script, animation, or editor-private binary payload
+- [x] 3.2 Generate one raster candidate at a time with an image model using the supplied artwork as reference, retain the accepted raw PNG with its exact prompt, exposed model/interface information, dimensions, checksum, and explicit maintainer acceptance as the vectorization source
+- [x] 3.3 Trace or controllably reconstruct the accepted raster into a sanitized editable standalone SVG symbol with canonical flat colors and no raster embedding, remote dependency, script, animation, font, or editor-private payload
+- [ ] 3.4 Build the deterministic horizontal, reverse, monochrome, favicon-size, and social-card vector family; publish the maintainer-directed live review deployment; present the actual contexts; and obtain explicit feedback or canonical approval
 - [x] 3.5 Add the licensed Inter webfont source and applicable font/asset license records, then expose approved typography through local font files and fallbacks
-- [x] 3.6 Generate deterministic favicon and social-preview distribution images from approved sources, document their dimensions and provenance, and verify the outputs at native size
+- [ ] 3.6 After vector-family approval, replace the production masters, regenerate deterministic favicon and social-preview distributions, update provenance records, and verify every output at native size
 
 ## 4. Pre-Launch Website Content and Structure
 
@@ -52,8 +52,8 @@
 ## 7. End-to-End Acceptance
 
 - [x] 7.1 Build from a fresh target-repository checkout through the declared Nix development shell and frozen Bun dependency graph, then serve the generated `dist/` rather than a development server
-- [x] 7.2 Drive the built homepage in Chromium at representative desktop and 320-pixel mobile viewports and verify primary content, navigation, wrapping, resources, and absence of console errors
+- [ ] 7.2 Drive the corrected built homepage in Chromium at representative desktop and 320-pixel mobile viewports and verify primary content, logo rendering, navigation, wrapping, resources, and absence of console errors
 - [x] 7.3 Exercise the built site using keyboard-only navigation, the skip link, visible focus, 200 percent zoom, and reduced-motion preference
-- [x] 7.4 Verify representative color pairs meet WCAG AA, the standalone and adjacent logo cases expose correct accessible names, and the approved mark remains legible at minimum rendered sizes
-- [x] 7.5 Inspect the deployed `talkcan.io` Pages URL for correct assets, metadata, social preview, sitemap, robots policy, internal links, HTTPS, and exact correspondence to the successful source commit
+- [ ] 7.4 Verify representative color pairs meet WCAG AA, the standalone and adjacent corrected logo cases expose correct accessible names, and the approved mark remains legible at minimum rendered sizes
+- [ ] 7.5 Inspect the corrected deployment at `talkcan.io` for assets, metadata, social preview, internal links, HTTPS, and exact correspondence to the successful source commit
 - [x] 7.6 Record the completed maintainer handoff for domain verification, OVH DNS, Pages custom-domain association, HTTPS enforcement, and the source update from the Pages origin to `talkcan.io`

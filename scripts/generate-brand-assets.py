@@ -51,15 +51,37 @@ def text_path(
     return path_pen.getCommands()
 
 
-def symbol_geometry(ink: str, can: str, tin: str, blue: str, red: str, yellow: str) -> str:
-    return f'''<path fill="{tin}" d="M25 30c0-9 23-17 51-17s51 8 51 17v94c0 10-23 18-51 18s-51-8-51-18z"/>
-<path fill="{can}" d="M33 33c12 6 28 9 43 9s31-3 43-9v87c-11 7-27 10-43 10s-32-3-43-10z"/>
-<ellipse fill="{ink}" cx="76" cy="30" rx="43" ry="11"/>
-<ellipse fill="{tin}" cx="76" cy="30" rx="35" ry="6"/>
-<path fill="none" stroke="{ink}" stroke-linecap="round" stroke-width="7" d="M53 67h45M53 84h45M53 101h45M119 109h16l13-16M135 109l13 16"/>
-<circle fill="{blue}" cx="149" cy="92" r="7"/>
-<circle fill="{red}" cx="149" cy="126" r="7"/>
-<circle fill="{yellow}" cx="135" cy="109" r="7"/>'''
+def symbol_geometry(
+    ink: str,
+    paper: str,
+    can: str,
+    tin: str,
+    blue: str,
+    red: str,
+    yellow: str,
+) -> str:
+    return f'''<g transform="scale(0.078125)">
+<defs>
+  <clipPath id="can-body">
+    <path d="M280 480H1200L1170 1470C1166 1542 984 1595 760 1595S350 1542 340 1470Z"/>
+  </clipPath>
+</defs>
+<ellipse fill="{tin}" cx="760" cy="1560" rx="470" ry="132"/>
+<path fill="{can}" d="M280 480H1200L1170 1470C1166 1542 984 1595 760 1595S350 1542 340 1470Z"/>
+<path fill="{paper}" clip-path="url(#can-body)" d="M420 450L585 460L665 1620H488Z"/>
+<path fill="none" stroke="{ink}" stroke-linecap="round" stroke-width="54" d="M530 830H958M530 960H958M530 1090H958"/>
+<path fill="none" stroke="{ink}" stroke-linecap="round" stroke-width="58" d="M365 1460C435 1540 610 1570 760 1570S1085 1540 1155 1460"/>
+<path fill="none" stroke="{ink}" stroke-linecap="round" stroke-width="56" d="M1160 1215L1470 1400"/>
+<path fill="none" stroke="{blue}" stroke-linecap="round" stroke-width="56" d="M1470 1400L1710 1090"/>
+<path fill="none" stroke="{yellow}" stroke-linecap="round" stroke-width="56" d="M1470 1400H1820"/>
+<path fill="none" stroke="{red}" stroke-linecap="round" stroke-width="56" d="M1470 1400L1710 1740"/>
+<circle fill="{ink}" cx="1470" cy="1400" r="66"/>
+<circle fill="{blue}" cx="1710" cy="1090" r="60"/>
+<circle fill="{yellow}" cx="1820" cy="1400" r="60"/>
+<circle fill="{red}" cx="1710" cy="1740" r="60"/>
+<ellipse fill="{tin}" cx="740" cy="480" rx="470" ry="158"/>
+<ellipse fill="{ink}" cx="740" cy="480" rx="420" ry="122"/>
+</g>'''
 
 
 def svg_document(view_box: str, title: str, body: str) -> str:
@@ -75,21 +97,21 @@ def write_assets() -> None:
     SOURCE_OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     wordmark = text_path("talkcan", 800, 112, 170, 130, -3)
     variants = {
-        "talkcan-logo.svg": (INK, CAN_RED, TIN, RADIO_BLUE, CAN_RED, STRING_YELLOW),
-        "talkcan-logo-reverse.svg": (WHITE, CAN_RED, TIN, RADIO_BLUE, CAN_RED, STRING_YELLOW),
-        "talkcan-mark-dark.svg": (INK, INK, INK, INK, INK, INK),
-        "talkcan-mark-light.svg": (WHITE, WHITE, WHITE, WHITE, WHITE, WHITE),
+        "talkcan-logo.svg": (INK, PAPER, CAN_RED, TIN, RADIO_BLUE, CAN_RED, STRING_YELLOW),
+        "talkcan-logo-reverse.svg": (WHITE, WHITE, CAN_RED, TIN, RADIO_BLUE, CAN_RED, STRING_YELLOW),
+        "talkcan-mark-dark.svg": (INK, INK, INK, INK, INK, INK, INK),
+        "talkcan-mark-light.svg": (WHITE, WHITE, WHITE, WHITE, WHITE, WHITE, WHITE),
     }
 
-    symbol = symbol_geometry(INK, CAN_RED, TIN, RADIO_BLUE, CAN_RED, STRING_YELLOW)
+    symbol = symbol_geometry(INK, PAPER, CAN_RED, TIN, RADIO_BLUE, CAN_RED, STRING_YELLOW)
     (OUTPUT_DIR / "talkcan-symbol.svg").write_text(
         svg_document("0 0 160 160", "Talkcan", symbol),
         encoding="utf-8",
     )
 
     for filename, colors in variants.items():
-        ink, can, tin, blue, red, yellow = colors
-        geometry = symbol_geometry(ink, can, tin, blue, red, yellow)
+        ink, paper, can, tin, blue, red, yellow = colors
+        geometry = symbol_geometry(ink, paper, can, tin, blue, red, yellow)
         body = (
             f'<g transform="translate(0 10)">{geometry}</g>\n'
             f'  <path fill="{ink}" d="{wordmark}"/>'
