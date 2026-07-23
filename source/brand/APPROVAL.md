@@ -1,13 +1,14 @@
-# Brand review status
+# Canonical identity approval
 
 - Selected direction: **A — Reference curve**
 - Accepted raster source: `model-output/talkcan-candidate-a-nanobanana-raw.png`
-- Vector candidate: `vectorization/talkcan-symbol-vector-draft.svg`
-- Live contextual review requested: 2026-07-23
-- Canonical approval: **pending maintainer feedback**
+- Canonical vector source: `scripts/generate-brand-assets.py`
+- Approval date: 2026-07-23
+- Approver: Talkcan maintainer
+- Reviewed contexts: live desktop and mobile hero, adjacent header symbol,
+  reverse footer lockup, monochrome treatments, favicon sizes, and social card
 
-The maintainer viewed and accepted the Nanobanana raster as the vectorization
-source, then explicitly directed publication of the reconstructed vector family
-to review it in the normal website context. This live candidate deployment is
-not canonical approval. Final approval or requested corrections must be
-recorded after contextual review.
+The maintainer approved the corrected live vector family after the hero
+decoration was removed, mobile symbol sizing was corrected, and the reverse
+lockup restored dark can details against its Paper stripe. The generated public
+SVG and PNG family is canonical.

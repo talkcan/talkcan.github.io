@@ -1,11 +1,10 @@
 # Distribution assets
 
-The current live-review raster files derive deterministically from the
-maintainer-accepted Nanobanana raster through the controlled vector
+The canonical raster distribution files derive deterministically from the
+maintainer-accepted Nanobanana raster through the approved controlled vector
 reconstruction in `scripts/generate-brand-assets.py`. The script uses the
 Nix-pinned `resvg` renderer, validates SVG safety, and reads each PNG IHDR at
-native size before success. Canonical approval remains pending contextual
-feedback.
+native size before success.
 
 | File | Native dimensions | Source |
 | --- | ---: | --- |

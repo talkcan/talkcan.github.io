@@ -8,7 +8,7 @@ Talkcan needs a canonical public identity before product launch, but the Android
 - Create a static, responsive, accessible pre-launch website presenting Talkcan as “A programmable walkie-talkie for your tools” through the approved can, string, endpoint, and channel metaphor.
 - Present Talkcan as the sole public identity without migration, former-name, download, or compatibility messaging.
 - Describe the product interaction and vision while distinguishing current, experimental, and conceptual behavior and avoiding commitments to the evolving extension surface.
-- Produce an approved vector-first brand asset family from the supplied brand guidelines and reference artwork, with explicit maintainer review before one candidate becomes canonical.
+- Produce an approved brand asset family through a documented image-model-raster-to-editable-vector workflow using the supplied brand guidelines and reference artwork, with separate explicit maintainer approval of the viewed raster source and the rendered production vector family.
 - Build the site with Astro 5, Bun, custom Astro components, custom CSS, static output, and only narrowly justified browser JavaScript; defer Starlight until stable documentation warrants it.
 - Publish deterministic site output through GitHub Actions and GitHub Pages, including canonical metadata, social previews, structured data, sitemap, and robots policy.
 - Verify responsive behavior, keyboard navigation, readable contrast, reduced-motion behavior, semantic structure, and the absence of broken or placeholder destinations.

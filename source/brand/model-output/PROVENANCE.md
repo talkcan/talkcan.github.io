@@ -12,10 +12,9 @@
 - Acceptance date: 2026-07-23
 
 The maintainer viewed this exact raster and accepted it as the source artwork for
-vectorization. This acceptance does not approve a vector master, lockup,
-monochrome treatment, favicon, or social preview. On 2026-07-23 the maintainer
-explicitly directed a live candidate deployment to review those outputs in
-context; that deployment is not canonical approval.
+vectorization. The reconstructed family was deployed for contextual review,
+corrected in response to feedback, and explicitly approved on 2026-07-23 after
+review in the live desktop, mobile, and reverse-lockup contexts.
 
 The raw PNG is immutable non-public provenance. It may contain gradients,
 shadows, texture, or incidental raster artifacts; controlled vectorization must
