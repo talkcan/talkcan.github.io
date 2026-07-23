@@ -14,7 +14,13 @@
     {
       devShells = forAllSystems (pkgs: {
         default = pkgs.mkShellNoCC {
-          packages = [ pkgs.bun ];
+          packages = [
+            pkgs.bun
+            (pkgs.python3.withPackages (python: [
+              python.brotli
+              python.fonttools
+            ]))
+          ];
 
           shellHook = ''
             expected_bun="1.3.13"
