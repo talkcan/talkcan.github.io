@@ -9,7 +9,8 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "astro build && bun run validate:dist",
+    "validate:dist": "bun scripts/validate-dist.mjs",
     "preview": "astro preview"
   },
   "devDependencies": {
